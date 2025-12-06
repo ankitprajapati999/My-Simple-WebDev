@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+header {
+    box-shadow: 0 0 12px black;
+    padding-bottom: 1rem;
+}
+nav {
+    display: flex;
+    padding: 1.2rem 2rem;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-left > a{
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-left ul {
+    font-style: "Poppins Fallback";
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.nav-left ul li{
+    list-style: none;
+}
+.nav-left ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.marchandise {
+    padding: 0.5rem 1rem;
+    border: 1px solid hsl(240, 5.9%, 10%);
+    border-radius: 1.5rem;
+}
+
+.marchandise a{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: rgb(9, 9, 11);
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+}
+
+
+.nav-right input {
+    border-radius: 6px;
+    max-width: 100%;
+    background-color: rgb(244 244 245/1);
+    padding-left: 1rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    padding-right: 2.5rem;
+    font-size: .75rem;
+    outline: 2px solid transparent;
+}
+
+.rt {
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 0.3rem 1.2rem;
+    cursor: pointer;
+}
+
+.theme {
+    text-align: center;
+    padding: 0.3rem 0.75rem;
+}
+
+
+.down {
+    display: flex;
+    margin: 0 2rem;
+    gap: 2rem;
+}
+
+.nv {
+    font-size: 0.9rem;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.text {
+    position: absolute;
+    z-index: 2;
+}

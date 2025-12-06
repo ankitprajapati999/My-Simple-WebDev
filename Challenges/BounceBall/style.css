@@ -1,0 +1,42 @@
+.container {
+    background-color: blue;
+    width: 1500px;
+    height: 600px;
+    position: relative;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    left: 0;
+    bottom: 0; /* ground */
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+
+    animation: XYaxis 4s cubic-bezier(.25,.46,.45,.94)  infinite;
+}
+
+@keyframes XYaxis {
+    0% {
+        transform: translate(0px, 0px); /* ground */
+    }
+    20% {
+        transform: translate(300px, -450px); /* big bounce */
+    }
+    35% {
+        transform: translate(550px, 0px); /* hit ground */
+    }
+    55% {
+        transform: translate(850px, -350px); /* smaller bounce */
+    }
+    70% {
+        transform: translate(1100px, 0px); /* ground */
+    }
+    85% {
+        transform: translate(1350px, -200px); /* last bounce */
+    }
+    100% {
+        transform: translate(1300px, 0px); /* settle on ground */
+    }
+}

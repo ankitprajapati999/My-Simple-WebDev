@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: wheat;
+    animation: 1700ms DJ infinite;
+}
+
+.container {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20%, 30rem, 500px);
+}
+
+
+.text {
+    display: flex;
+    gap: 2rem;
+    background-color: white;
+    rotate: 270deg;
+    animation: 1800ms goright infinite;
+}
+.text h1 {
+    font-size: 3rem;
+}
+
+.img-wrapper {
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10rem;
+}
+
+.container .img-wrapper .moto {
+    animation: 500ms spinright infinite;
+}
+
+.container .img-wrapper .balak {
+    animation: 500ms spinleft infinite;
+}
+
+
+
+.container .img-wrapper img {
+    height: 50%;
+    width: 50%;
+}
+
+
+@keyframes goright {
+    0% {
+        transform: translateX(-500px);
+    }
+    50% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(600px);
+    }
+}
+
+@keyframes DJ {
+    0% {
+        background: black;
+    }
+    10% {
+        background: blue;
+    }
+    20% {
+        background: pink;
+    }
+    30% {
+        background: yellowgreen;
+    }
+    40% {
+        background: red;
+    }
+    50% {
+        background: green;
+    }
+    60% {
+        background: blueviolet;
+    }
+    70% {
+        background: azure;
+    }
+    80% {
+        background: brown;
+    }
+    90% {
+        background: blue;
+    }
+    100% {
+        background: white;
+    }
+}
+@keyframes spinright {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+@keyframes spinleft {
+    
+    0% {
+        transform: rotate(360deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
