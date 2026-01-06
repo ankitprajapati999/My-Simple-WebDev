@@ -1,0 +1,1 @@
+const FAQ = document.getElementsByClassName("faque")
