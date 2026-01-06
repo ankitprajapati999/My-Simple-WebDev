@@ -11,6 +11,7 @@ body {
     font-weight: 100;
     font-style: normal;
     background-color: black;
+    color: white;
 
 }
 header {
@@ -99,7 +100,7 @@ header {
 }
 
 
-.text > .mail #mail{
+.mail #mail{
     height: 7vh;
     max-height: 14vh;
     flex: 1;
@@ -119,7 +120,7 @@ header {
     outline: 2px solid white; 
 }
  
-.text > .mail {
+.mail {
     display: flex;
     flex-wrap: wrap;
     max-width: 80vw;
@@ -129,7 +130,7 @@ header {
     justify-content: center;
     gap: 0.6rem;
 }
-.text > .mail #mail::placeholder {
+.mail #mail::placeholder {
     font-size: 1.12rem;
 }
 
@@ -322,7 +323,7 @@ main {
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.456rem;
 }
 
 .faq > .title > h3 {
@@ -332,7 +333,7 @@ main {
 }
 
 .faqbox > .faque > svg {
-    width: 2.5rem;
+    width: min(2.5rem, 4vw);
     text-align: center;
 }
 
@@ -341,11 +342,12 @@ main {
     padding: 1.4rem 1.2rem;
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    gap: max(4rem, 10vw);
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 400;
     transition: 300ms;
+    cursor: pointer;
 }
 
 .faque:hover {
@@ -355,7 +357,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 0.3rem;
+    gap: 0.2rem;
 }
 
 .faq > .faqbox > .para {
@@ -369,9 +371,79 @@ main {
 }
 
 
+.greet{
+    max-width: min(1300px, 80vw);
+    margin: 10px 30vw;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footmail {
+    max-width: 1300px;
+    width: 60vw;
+}
 
 
+.bottom-box {
+    max-width: min(1300px, 80vw);
+    margin: 2rem auto;
+}
+.bottom-box > .que-call {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+.que-call > a {
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+    color: rgb(205, 223, 232);
 
+}
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-flow: row;
+    gap: 1rem;
+}
+
+.links > .link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+.link > a {
+    font-size: large;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+    color: rgb(205, 223, 232);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.lang-btn-foot {
+    max-width: min(1300px, 80vw);
+    margin: 2rem auto;
+}
+
+
+.lang-btn-foot > .net {
+    color: rgba(205, 223, 232, 0.881);
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 6vh;
+}
+
+.inst {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 3vh;
+}
+
+.inst > p > a {
+    color: rgb(68, 142, 244);
+}
 @media(max-width:300px) {
     body {
         opacity: 0;
@@ -384,7 +456,23 @@ main {
         font-size: 3.5rem;
         line-height: 4rem;
     }
-    
+    .footmail {
+        max-width: 30vw;
+    }
+    .greet {
+        margin: 10px 40vw;
+    }
+}
+
+@media (max-width:2500px) {
+    .footmail {
+        max-width: 1300px;
+        width: 60vw;
+    }
+    .greet{
+        max-width: min(1300px, 80vw);
+        margin: 10px 30vw;
+    }
 }
 
 @media (max-width:1280px) {
@@ -403,9 +491,14 @@ main {
     .text .mail > #mail {
         height: 6vh;
     }
+   
 }
 
 @media (max-width:960px) {
+
+    .faq {
+        max-width: min(1300px, 90vw);
+    }
 
     .banner {
         height: 80vh;
@@ -417,6 +510,17 @@ main {
         font-size: 2rem;
         line-height: 2rem;
     }
+    .greet{
+        max-width: min(1300px, 80vw);
+        margin: 10px 10vw;
+    }
+    .footmail {
+      margin: auto 10vw;
+    }
+    .footmail > .gtst {
+        height: 100%;
+        padding: 1.4rem;
+    }
 }
 
 @media (max-width:600px) {
@@ -427,6 +531,19 @@ main {
     .switch {
         display: inline;
     }
+    .greet{
+        max-width: min(1300px, 80vw);
+        margin: 10px 10vw;
+        font-size: small;
+    }
+    .footmail {
+        margin: auto;
+    }
+
+    .faqbox > .faque {
+        font-size: 1rem;
+        padding: 1.1rem 1rem;
+    }
 }
 
 
@@ -434,6 +551,10 @@ main {
     .gtst {
         padding: 1rem 1.5rem;
         font-size: 1rem;
+    }
+    .faqbox > .faque {
+        font-size: 0.8rem;
+        padding: 1rem 0.8rem;
     }
 }
 
